@@ -1,47 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Little Lot Of Everything</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Lot Of Everything</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="tab-container">
-    <button class="tab-button active" data-tab="tab-game">Game</button>
-    <button class="tab-button" data-tab="tab-shop">Shop</button>
-
-    <div id="tab-game" class="tab-content active">
-      <div class="container">
+    <div class="container">
         <h1>A Little Lot Of Everything</h1>
-        <!-- Game content goes here -->
-             <p>Welcome to the universe of possibilities! Explore, expand, and uncover the mysteries of the cosmos.</p>
-    <p>Your current space: <span id="space">0</span></p>
-    <p>Your current heat: <span id="heat">0</span></p>
-    <button id="exploreButton">Explore</button>
-    <button id="burnMatterButton">Burn Matter</button>
-        <p>Game content...</p>
-      </div>
+        <div class="row">
+            <p id="explorationResult" class="hidden"></p> <!-- This is where the exploration result will be displayed -->
+            <button id="exploreButton">Explore</button>
+            <div id="shopMenu">
+                <div class="shopMenuBackground">
+                    <h2>Shop</h2>
+                    <ul id="shopItems">
+                        <li>
+                            <button class="createStar" data-cost="200">
+                                Stella Dei Lux
+                                <br>
+                                <span class="description">Cost: 200 matter</span>
+                                <br>
+                                <span class="description">Description: Create a star to generate heat and progress</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="sunContainer" class="hidden">
+                <!-- Insert ASCII art sun here -->
+                <pre id="sun">
+                        |
+                    .   |
+                        |
+          \    *        |     *    .  /
+            \        *  |  .        /
+         .    \     ___---___     /    .  
+                \.--         --./     
+     ~-_    *  ./               \.   *   _-~
+        ~-_   /                   \   _-~     *
+   *       ~-/                     \-~        
+     .      |                       |      .
+         * |                         | *     
+-----------|                         |-----------
+  .        |                         |        .    
+        *   |                       | *
+           _-\                     /-_    *
+     .  _-~ . \                   /   ~-_     
+     _-~       `\               /'*      ~-_  
+    ~           /`--___   ___--'\           ~
+           *  /        ---     .  \  
+            /     *     |           \
+          /             |   *         \
+                     .  |        .
+                        |
+                        |
+                </pre>
+                <button id="feedSunButton">Feed Sun</button>
+            </div>
+        </div>
+        <div class="info">
+            <p>Space: <span id="space">0</span></p>
+            <p>Heat: <span id="heat" class="red-text">100</span></p>
+            <p>Matter: <span id="matter">0</span></p>
+        </div>
+        <div class="controls">
+            <button id="saveButton">Save</button>
+            <button id="loadButton">Load</button>
+        </div>
+        <div class="developer-console">
+            <label for="commandInput">Developer Console:</label>
+            <input type="text" id="commandInput" placeholder="Type a command...">
+            <button id="executeCommandButton">Execute</button>
+        </div>
     </div>
-
-    <div id="tab-shop" class="tab-content">
-      <div class="container">
-        <h1>Shop</h1>
-        <!-- Shop content goes here -->
-           <p>Welcome to the cosmic emporium! Spend your hard-earned matter on various celestial goods and upgrades.</p>
-    <ul>
-      <li>
-        <span>Stella Dei Lux</span>
-        <span>Cost: 200 Matter</span>
-        <button id="buyStellaDeiLuxButton">Buy</button>
-      </li>
-      <!-- Add more shop items as needed -->
-    </ul>
-        <p>Shop content...</p>
-      </div>
-    </div>
-  </div>
-
+    
+    <script src="script.js"></script>
+</body>
+</html>
   <script src="script.js"></script>
 </body>
 </html>
