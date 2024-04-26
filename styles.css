@@ -1,18 +1,18 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #080c16; /* Dark blue-black */
-    color: #ffffff; /* White text */
     margin: 0;
     padding: 0;
+    color: #ffffff; /* Changed text color to white */
 }
 
 .container {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 h1 {
-    color: #333; /* Heading color */
+    color: #ffffff; /* Changed heading color to white */
 }
 
 .info {
@@ -44,6 +44,15 @@ button {
     color: #ffffff;
     padding: 15px;
     border-radius: 5px;
+    max-height: 80vh; /* Maximum height of the shop menu */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    display: inline-block; /* Adjust display property */
+}
+
+.hidden {
+    display: none;
+}
+
     max-height: 80vh; /* Maximum height of the shop menu */
     overflow-y: auto; /* Enable vertical scrolling if needed */
     display: inline-block; /* Adjust display property */
