@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Little Lot Of Everything</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Lot Of Everything</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+  <div class="tab-container">
+    <button class="tab-button active" data-tab="tab-game">Game</button>
+    <button class="tab-button" data-tab="tab-shop">Shop</button>
+
+    <div id="tab-game" class="tab-content active">
+      <div class="container">
         <h1>A Little Lot Of Everything</h1>
-        <!-- Add your content here -->
+        <!-- Game content goes here -->
+             <p>Welcome to the universe of possibilities! Explore, expand, and uncover the mysteries of the cosmos.</p>
+    <p>Your current space: <span id="space">0</span></p>
+    <p>Your current heat: <span id="heat">0</span></p>
+    <button id="exploreButton">Explore</button>
+    <button id="burnMatterButton">Burn Matter</button>
+        <p>Game content...</p>
+      </div>
     </div>
-    <script src="script.js"></script>
+
+    <div id="tab-shop" class="tab-content">
+      <div class="container">
+        <h1>Shop</h1>
+        <!-- Shop content goes here -->
+           <p>Welcome to the cosmic emporium! Spend your hard-earned matter on various celestial goods and upgrades.</p>
+    <ul>
+      <li>
+        <span>Stella Dei Lux</span>
+        <span>Cost: 200 Matter</span>
+        <button id="buyStellaDeiLuxButton">Buy</button>
+      </li>
+      <!-- Add more shop items as needed -->
+    </ul>
+        <p>Shop content...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
